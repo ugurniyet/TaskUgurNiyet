@@ -6,10 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import java.util.List;
-;
+
 
 public class QaTestingPage {
 
+    //Page factory class used the implicitly create the located elements with annotations
     public QaTestingPage() {
         PageFactory.initElements(Driver.get(), this);
     }
@@ -52,9 +53,6 @@ public class QaTestingPage {
 
     @FindBy(xpath = "//ul[@class='country-list']/li")
     public List<WebElement> countryList;
-
-
-
 
 
     //This method gets the number of warning messages received in input boxes.

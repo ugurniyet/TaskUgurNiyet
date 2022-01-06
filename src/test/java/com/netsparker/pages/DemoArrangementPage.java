@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class DemoArrangementPage {
 
+    //Page factory class used the implicitly create the located elements with annotations
     public DemoArrangementPage() {
         PageFactory.initElements(Driver.get(), this);
     }
@@ -33,7 +34,7 @@ public class DemoArrangementPage {
     //This is method to select date and time of the demo meeting.
     //All days (available or not) are taken into a list. Then the available days are saved in a list
     //Random method is used to click on a random day. Same principles are also applied for hours.
-    public void selectDateAndTime() {
+    public void chooseDateAndTime() {
         List<WebElement> availableDays=new ArrayList<>();
         Driver.get().switchTo().frame(0);
         for (WebElement day : days) {
@@ -49,6 +50,7 @@ public class DemoArrangementPage {
         BrowserUtils.waitForPageToLoad(5);
     }
 
+    //same logic as choose date
     public void chooseHourAndConfirm() {
         Random random=new Random();
         int index= random.nextInt(timeButton.size());

@@ -23,7 +23,6 @@ public class BrowserUtils {
         }
     }
 
-
     /*
     Scrolls down to an element using JavaScript
     Takes a WebElement as parameter
@@ -40,7 +39,6 @@ public class BrowserUtils {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.get();
         jse.executeScript("window.scrollBy("+horizontal+","+vertical+")");
     }
-
 
 }
 

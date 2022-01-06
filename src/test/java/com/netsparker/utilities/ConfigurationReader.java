@@ -10,9 +10,7 @@ public class ConfigurationReader {
     //so that maintenance of our framework is easier, all data are stored in a central location.
     //Methods, code blocks etc. are static so that I can call it without creating object from this class
     private static Properties properties;
-
     static {
-
         try {
             // file to read
             String path = "configuration.properties";

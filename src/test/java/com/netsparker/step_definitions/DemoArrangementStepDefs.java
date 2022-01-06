@@ -6,10 +6,9 @@ import org.junit.Assert;
 
 public class DemoArrangementStepDefs {
 
-
     @Then("user should be able to select date and time")
     public void user_should_be_able_to_select_date_and_time() {
-        new DemoArrangementPage().selectDateAndTime();
+        new DemoArrangementPage().chooseDateAndTime();
     }
 
     @Then("user should go to schedule page")
@@ -27,7 +26,5 @@ public class DemoArrangementStepDefs {
         String actualMainTitle = new DemoArrangementPage().getMainTitleOfPage();
         Assert.assertFalse(expectedMainTitle.equalsIgnoreCase(actualMainTitle));
     }
-
-
 
 }

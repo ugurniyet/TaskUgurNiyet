@@ -53,8 +53,8 @@ public class QaTestingStepDefs {
     @Then("country phone code list dropdown should open")
     public void country_phone_code_list_dropdown_should_open() {
         Assert.assertFalse(new QaTestingPage().countryList.isEmpty());
-
     }
+
     @Then("preferred countries {string}, {string} should be on top of the list")
     public void preferred_countries_should_be_on_top_of_the_list(String preferredCountry1, String preferredCountry2) {
         String actualPreferredCountries = new QaTestingPage().preferredCountries();
