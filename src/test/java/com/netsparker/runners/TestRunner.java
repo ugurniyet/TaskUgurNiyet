@@ -10,16 +10,16 @@ import org.junit.runner.RunWith;
         - directory to record the failed test for future use in re-run
         - tags to run
      */
-@RunWith(Cucumber.class)
-@CucumberOptions(
-        plugin = {"json:target/cucumber.json",
-                "html:target/default-html-reports",
-                "rerun:target/rerun.txt"},
+    @RunWith(Cucumber.class)
+    @CucumberOptions(
+            plugin = {"json:target/cucumber.json",
+                    "html:target/cucumber-report.html",
+                    "rerun:target/rerun.txt"},
 
-        features = "src/test/resources/features",
-        glue = "com/netsparker/step_definitions",
-        dryRun = false,
-        tags = "@wip"
-)
-public class TestRunner {
-}
+            features = "src/test/resources/features",
+            glue = "com/netsparker/step_definitions",
+            dryRun = false,
+            tags = "@wip"
+    )
+    public class TestRunner {
+    }

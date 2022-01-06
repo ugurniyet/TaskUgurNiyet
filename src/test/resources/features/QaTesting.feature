@@ -1,4 +1,4 @@
-
+@wip
 Feature: Get a Demo  Feature
   @functional
   Scenario Outline: user should be able to access getting started page after filling valid information
@@ -47,7 +47,7 @@ Feature: Get a Demo  Feature
     Then country phone code list dropdown should open
     And preferred countries "United Kingdom", "United States" should be on top of the list
 
-  @non-functional @wip
+  @non-functional
   Scenario: input boxes should have the same size
     Given the user is on qa-testing website
     Then all input boxes should have same size

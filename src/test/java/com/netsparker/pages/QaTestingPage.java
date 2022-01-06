@@ -77,6 +77,7 @@ public class QaTestingPage {
     //First element was used as expected value due to absence of requirement document
     public boolean verifyButtonColors() {
         BrowserUtils.scrollToElement(paragraphButtons.get(7));
+        BrowserUtils.scrollToElement(paragraphButtons.get(0));
         boolean elementColorsAreSame = true;
         String firstColor = paragraphButtons.get(0).getCssValue("background-color");
         for (WebElement paragraphButton : paragraphButtons) {
@@ -125,9 +126,6 @@ public class QaTestingPage {
         countries += countryList.get(1).getText();
         return countries;
     }
-
-
-
 
 
 }
