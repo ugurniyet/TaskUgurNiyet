@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
     /*
     In this runner class, we determine the following;
-        - plugin for report directory
-        - record the failed test to use in re-run
+        - plugin for report creation directory
+        - directory to record the failed test for future use in re-run
         - tags to run
      */
 @RunWith(Cucumber.class)

@@ -31,7 +31,8 @@ public class DemoArrangementPage {
     public WebElement mainTitleOfPage;
 
     //This is method to select date and time of the demo meeting.
-    //all days in the
+    //All days (available or not) are taken into a list. Then the available days are saved in a list
+    //Random method is used to click on a random day. Same principles are also applied for hours.
     public void selectDateAndTime() {
         List<WebElement> availableDays=new ArrayList<>();
         Driver.get().switchTo().frame(0);
@@ -55,24 +56,30 @@ public class DemoArrangementPage {
         confirmButton.get(index).click();
     }
 
-    public boolean unSelectDate(){
-        List<WebElement> unAvailableDays=new ArrayList<>();
+    /*
+     In this method, unavailable days are collected into a list
+     A random unavailable day is clicked. This will/should create an exception.
+     Then the exception is handled with try catch block. If there is no exception, case will fail.
+     */
+    public boolean unavailableDates(){
+        List<WebElement> unavailableDays=new ArrayList<>();
         Driver.get().switchTo().frame(0);
         for (WebElement day : days) {
             if (!day.isEnabled()) {
-                unAvailableDays.add(day);
+                unavailableDays.add(day);
             }
         }
         Random random = new Random();
-        int index = random.nextInt(unAvailableDays.size());
+        int index = random.nextInt(unavailableDays.size());
         try{
-            unAvailableDays.get(index).click();
+            unavailableDays.get(index).click();
             return false;
         }catch (Exception e){
             return true;
         }
     }
 
+    //This method is used to get the largest title in the page.
     public String getMainTitleOfPage () {
         Driver.get().switchTo().defaultContent();
         return mainTitleOfPage.getText();

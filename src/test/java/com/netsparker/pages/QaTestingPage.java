@@ -57,10 +57,14 @@ public class QaTestingPage {
 
 
 
+    //This method gets the number of warning messages received in input boxes.
+    //Using seperate methods, locators for each warning message would lead to a crowded code
+    //So that all warning messages are collected into a single list by using their common text as locator
     public int getErrorMessageCount () {
         return allVisibleErrorMessages.size();
     }
 
+    //This method receives user information and fills the demo request form
     public void fillUserInfo(String firstName,String lastName,String workEmail,String company,String phone){
         firstNameButton.sendKeys(firstName);
         lastNameButton.sendKeys(lastName);
@@ -69,6 +73,8 @@ public class QaTestingPage {
         phoneButton.sendKeys(phone);
     }
 
+    //This method locates all buttons (nears paragraphs) and compares their Css color codes
+    //First element was used as expected value due to absence of requirement document
     public boolean verifyButtonColors() {
         BrowserUtils.scrollToElement(paragraphButtons.get(7));
         boolean elementColorsAreSame = true;
@@ -82,6 +88,8 @@ public class QaTestingPage {
         return elementColorsAreSame;
     }
 
+    //this method groups input boxes for 2 forms and compares box size for visual control
+    //First element was used as expected value due to absence of requirement document
     public boolean verifyInputBoxSize() {
         boolean boxSizeIsSame = true;
         int firstDefaultWidth = firstInputTable.get(0).getSize().width;
@@ -100,6 +108,7 @@ public class QaTestingPage {
       return boxSizeIsSame;
     }
 
+    //This method returns the warning message after log attempt with common mails ie. gmail, hotmail etc.
     public String getMailErrorMessage () {
         String message = "";
         if(mailRejectedMessage.isDisplayed()) {
@@ -108,6 +117,8 @@ public class QaTestingPage {
         return message;
     }
 
+    //It was seen that US & UK appreared on top of countries phone codes list.
+    //this method gets these preferred countries and returns them as string
     public String preferredCountries() {
         String countries = "";
         countries += countryList.get(0).getText();

@@ -13,7 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
 
-    //singleton class which has private constructor. So that other classes cannot create object of this class
+    //This is a singleton class which has private constructor. So that other classes cannot create object of this class
     private Driver(){}
 
     private static WebDriver driver;

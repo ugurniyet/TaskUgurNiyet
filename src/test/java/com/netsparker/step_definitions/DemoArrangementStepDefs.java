@@ -19,7 +19,7 @@ public class DemoArrangementStepDefs {
 
     @Then("unavailable days should not be selectable")
     public void unavailable_days_should_be_selectable() {
-        Assert.assertTrue(new DemoArrangementPage().unSelectDate());
+        Assert.assertTrue(new DemoArrangementPage().unavailableDates());
     }
 
     @Then("main title on the page should change from {string}")
