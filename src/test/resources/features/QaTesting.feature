@@ -47,7 +47,7 @@ Feature: Get a Demo  Feature
     Then country phone code list dropdown should open
     And preferred countries "United Kingdom", "United States" should be on top of the list
 
-  @non-functional
+  @non-functional @wip
   Scenario: input boxes should have the same size
     Given the user is on qa-testing website
     Then all input boxes should have same size

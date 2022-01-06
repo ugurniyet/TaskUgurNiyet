@@ -48,6 +48,7 @@ public class QaTestingStepDefs {
 
     @When("the user clicks on the flag button in telephone input")
     public void the_user_clicks_on_the_flag_button_in_telephone_input() {
+        BrowserUtils.scrollByPixel(0,500);
         new QaTestingPage().phoneCodeFlagButton.click();
 
 

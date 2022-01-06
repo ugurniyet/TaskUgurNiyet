@@ -16,7 +16,6 @@ public class Hooks {
         Driver.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
-
     @After
     public void tearDown(Scenario scenario){
         if(scenario.isFailed()){

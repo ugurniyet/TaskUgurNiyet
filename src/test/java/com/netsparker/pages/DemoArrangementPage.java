@@ -5,7 +5,6 @@ import com.netsparker.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -31,6 +30,8 @@ public class DemoArrangementPage {
     @FindBy(xpath = "//h1[.='Now select a time on the calendar below:']")
     public WebElement mainTitleOfPage;
 
+    //This is method to select date and time of the demo meeting.
+    //all days in the
     public void selectDateAndTime() {
         List<WebElement> availableDays=new ArrayList<>();
         Driver.get().switchTo().frame(0);

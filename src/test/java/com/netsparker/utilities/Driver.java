@@ -60,10 +60,10 @@ public class Driver {
                     break;
             }
         }
-
         return driver;
     }
 
+    //This method is used to ensure that driver is closed and prepared for the next execution by assigning null value
     public static void closeDriver() {
         if (driver != null) {
             driver.quit();

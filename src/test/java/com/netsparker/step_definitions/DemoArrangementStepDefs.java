@@ -20,14 +20,12 @@ public class DemoArrangementStepDefs {
     @Then("unavailable days should not be selectable")
     public void unavailable_days_should_be_selectable() {
         Assert.assertTrue(new DemoArrangementPage().unSelectDate());
-
     }
 
     @Then("main title on the page should change from {string}")
     public void main_title_on_the_page_should_change_from(String expectedMainTitle) {
         String actualMainTitle = new DemoArrangementPage().getMainTitleOfPage();
-        Assert.assertEquals(expectedMainTitle, actualMainTitle);
-
+        Assert.assertFalse(expectedMainTitle.equalsIgnoreCase(actualMainTitle));
     }
 
 

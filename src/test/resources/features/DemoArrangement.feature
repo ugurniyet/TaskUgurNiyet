@@ -1,8 +1,7 @@
-
+@wip
 Feature: Arrange the demo call date and time
 
-
-  Scenario Outline: user should be able to access getting started page after filling valid informatio
+  Scenario Outline: user can select date - time land on schedule page
     Given the user is on qa-testing website
     When user enters the following "<firstName>","<lastName>","<workMail>","<company>","<phone>"
     When user clicks on get a demo button
@@ -14,7 +13,7 @@ Feature: Arrange the demo call date and time
       | Brendan   | Schneider | b.scheneirder@toyota.com.tr | toyota  | 5074566787 |
       | Stephan   | Haley     | s.haley@honda.com.tr        | honda   | 5332355265 |
 
-  @wip @functional
+   @functional
     Scenario Outline: the user cannot select non-available days
       Given the user is on qa-testing website
       When user enters the following "<firstName>","<lastName>","<workMail>","<company>","<phone>"
@@ -25,8 +24,8 @@ Feature: Arrange the demo call date and time
         | Brendan   | Schneider | b.scheneirder@toyota.com.tr | toyota  | 5074566787 |
 
 
-  @wip @non-functional
-  Scenario Outline: user should be able to access getting started page after filling valid informatio
+ @non-functional
+  Scenario Outline: page title should change after demo date-time is confirmed
     Given the user is on qa-testing website
     When user enters the following "<firstName>","<lastName>","<workMail>","<company>","<phone>"
     When user clicks on get a demo button

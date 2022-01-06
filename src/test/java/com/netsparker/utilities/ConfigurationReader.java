@@ -9,7 +9,7 @@ public class ConfigurationReader {
     //This reader is used to read frequently used data(url, username password etc) from configuration properties
     //so that maintenance of our framework is easier, all data are stored in a central location.
 
-    //here is my object and method. They are static so that I can call it without creating object from this class
+    //Methods, code blocts etc. are static so that I can call it without creating object from this class
     private static Properties properties;
 
     static {

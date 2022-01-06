@@ -38,8 +38,11 @@ public class QaTestingPage {
     @FindBy(xpath = "//span[@class='fas-li']")
     public List<WebElement> paragraphButtons;
 
-    @FindBy(css = "input.form-control")
-    public List<WebElement> allInputBoxes;
+    @FindBy(xpath = "//form[@id='form-pardot']//input[contains(@class,'form-control')]")
+    public List<WebElement> firstInputTable;
+
+    @FindBy(xpath = "//form[@id='form-pardot1']//input[contains(@class,'form-control')]")
+    public List<WebElement> secondInputTable;
 
     @FindBy(id = "Email-error")
     public WebElement mailRejectedMessage;
@@ -67,7 +70,7 @@ public class QaTestingPage {
     }
 
     public boolean verifyButtonColors() {
-        BrowserUtils.scrollToElement(paragraphButtons.get(6));
+        BrowserUtils.scrollToElement(paragraphButtons.get(7));
         boolean elementColorsAreSame = true;
         String firstColor = paragraphButtons.get(0).getCssValue("background-color");
         for (WebElement paragraphButton : paragraphButtons) {
@@ -81,13 +84,17 @@ public class QaTestingPage {
 
     public boolean verifyInputBoxSize() {
         boolean boxSizeIsSame = true;
-        int widthDefault = allInputBoxes.get(0).getSize().width;
-        int heightDefault = allInputBoxes.get(0).getSize().height;
+        int firstDefaultWidth = firstInputTable.get(0).getSize().width;
+        int firstDefaultHeight = firstInputTable.get(0).getSize().height;
+        int secondDefaultWidth = secondInputTable.get(0).getSize().width;
+        int secondDefaultHeight = secondInputTable.get(0).getSize().height;
 
-        for (WebElement inputBox : allInputBoxes) {
-            if (inputBox.getSize().width!=widthDefault || inputBox.getSize().height!=heightDefault ) {
+        for (int i=0; i<firstInputTable.size(); i++ ) {
+            if (firstInputTable.get(i).getSize().width!=firstDefaultWidth || firstInputTable.get(i).getSize().height!=firstDefaultHeight ||
+                secondInputTable.get(i).getSize().width!=secondDefaultWidth || secondInputTable.get(i).getSize().height!=secondDefaultHeight)
+            {
                 boxSizeIsSame = false;
-                break;
+                return boxSizeIsSame;
             }
         }
       return boxSizeIsSame;
