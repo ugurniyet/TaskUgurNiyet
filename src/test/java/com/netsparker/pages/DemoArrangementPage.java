@@ -2,10 +2,7 @@ package com.netsparker.pages;
 
 import com.netsparker.utilities.BrowserUtils;
 import com.netsparker.utilities.Driver;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
