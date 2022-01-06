@@ -55,6 +55,7 @@ public class DemoArrangementPage {
         Random random=new Random();
         int index= random.nextInt(timeButton.size());
         timeButton.get(index).click();
+        BrowserUtils.waitForPageToLoad(3);
         confirmButton.get(index).click();
     }
 
