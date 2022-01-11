@@ -11,5 +11,11 @@ public class Locators {
     @FindBy ()
     public WebElement allTshirtsButton;
 
-    @FindBy
+    @FindBy(xpath = "(//span[@class='catalog_sidebar-menuitem_text'])[1]")
+    public WebElement mensClothingButton;
+
+    @FindBy(xpath = "//*[.='Unisex Staple T-Shirt | Bella + Canvas 3001']")
+    public WebElement requestedTshirt;
+
+
 }
