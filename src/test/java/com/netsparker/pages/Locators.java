@@ -17,5 +17,11 @@ public class Locators {
     @FindBy(xpath = "//*[.='Unisex Staple T-Shirt | Bella + Canvas 3001']")
     public WebElement requestedTshirt;
 
+    @FindBy(xpath = "//span[@style='background-color: rgb(12, 12, 12);']")
+    public WebElement blackColor;
+
+    @FindBy(xpath = "//a[@data-label='Size L']")
+    public WebElement sizeLbutton;
+
 
 }
