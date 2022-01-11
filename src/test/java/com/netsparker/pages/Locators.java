@@ -39,7 +39,7 @@ public class Locators {
     public WebElement chosenPhoto;
 
     @FindBy(xpath = "(//a[contains(text(),'Select')])[1]")
-    public WebElement clickOnPhoto
+    public WebElement clickOnPhoto;
 
 
 
