@@ -8,7 +8,7 @@ public class Locators {
     @FindBy(id = "navigation-menu-1-toggle")
     public WebElement productsButton;
 
-    @FindBy ()
+    @FindBy (xpath = "(//span[text()='All shirts'])[2]")
     public WebElement allTshirtsButton;
 
     @FindBy(xpath = "(//span[@class='catalog_sidebar-menuitem_text'])[1]")
