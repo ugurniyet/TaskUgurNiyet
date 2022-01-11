@@ -1,11 +1,16 @@
 package com.netsparker.pages;
 
+import com.netsparker.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class Locators {
+    public Locators() {
+        PageFactory.initElements(Driver.get(), this);
+    }
 
-    @FindBy(id = "navigation-menu-1-toggle")
+    @FindBy(xpath = "(//a[contains(text(),'Product')])[1]")
     public WebElement productsButton;
 
     @FindBy (xpath = "(//span[text()='All shirts'])[2]")
